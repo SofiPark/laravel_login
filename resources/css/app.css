@@ -1,0 +1,71 @@
+
+  body {
+    background-color: var(--body-bg-color);
+    color: var(--text-light-gray);
+    height: 100vh;
+    display: grid;
+    place-content: center;
+  }
+  body::after,
+body::before {
+    content: '';
+    position: fixed;
+    height: 600px;
+    width: 600px;
+    border-radius: 50%;
+    z-index: -1;
+    filter: blur(150px);
+    opacity: 10;
+}
+
+body::before {
+    background-color: var(--magenta);
+    left: 0;
+    bottom: 0;
+    transform: translate(-50%);
+}
+
+body::after {
+    background: var(--violet);
+    right: 0;
+    top: 0;
+    transform: translate(50%);
+}
+.gradient {
+    background: linear-gradient(to right, var(--green), var(--lead));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-weight: bold;
+}
+  .form-login {
+    height: 80vh;
+    width: 80vw;
+  }
+  #btnSwitch {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+
+  :root {
+    --green: hsl(162, 68%, 60%);
+    --lead: hsl(331, 26%, 56%);
+    --blue: hsl(193, 72%, 52%);
+    --magenta: hsl(322.703, 84%, 43%, 1);
+    --violet: hsl(272, 92%, 32%);
+    --text-white: hsl(0, 0%, 100%);
+    --text-light-gray: hsl(0, 0%, 90%);
+    --body-bg-color: hsl(259.375, 50%, 38%, 1);
+    --glass-bg-color: hsla(0, 0%, 100%, .05);
+    --border-color: hsla(0, 0%, 100%, .25);
+    --blur: blur(18px);
+    --button-hover-color: hsla(0, 0%, 0%, .3);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
